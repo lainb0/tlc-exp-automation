@@ -35,9 +35,16 @@ pip install pypylon Pillow slackweb pyserial modbus-tk pythonnet
 
 ## 想定する実験系
 
+- データロガー: GRAPHTEC GL240
+- カメラ: Basler a2A 1920-160umBAS
+- TIC: OMRON E5CC
+- シリアルコンバータ: LINEEYE SI-35USB-2
+
+![Image](https://github.com/user-attachments/assets/96f5e8ce-5a91-4e8b-bb48-dc1e0311c08a)
+
 ## 動作の説明
 
-簡単なフローチャートは以下の通りです．
+以下の図の手順でプログラムが動作します．
 
 ![Image](https://github.com/user-attachments/assets/7f5615c1-7ce0-4bb7-91f8-2a7262fcdee6)
 
@@ -61,3 +68,4 @@ slackのWebhook URLを指定して，Slackに通知を送るための関数が�
 
 ### codes/func_tic.py
 
+TICを制御するための関数が定義されています．
