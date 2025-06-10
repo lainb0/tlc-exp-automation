@@ -60,7 +60,12 @@ pip install pypylon Pillow slackweb pyserial modbus-tk pythonnet
 
 ### codes/func_logger.py
 
-データロガー
+データロガーの制御を行ういくつかの関数が定義されています．
+
+- 計測を開始
+- 計測を終了
+- ロガーの時刻を通信元と同期
+- 現在のCH1の値を取得
 
 ### codes/func_slack_notification.py
 
@@ -69,3 +74,6 @@ slackのWebhook URLを指定して，Slackに通知を送るための関数が�
 ### codes/func_tic.py
 
 TICを制御するための関数が定義されています．
+
+- 現在値を読み込み
+- 目標値を書き込み
