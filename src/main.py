@@ -13,6 +13,8 @@ import func_logger as fl
 import func_camera as fc
 import func_slack_notification as fsn
 
+# 設定ここから
+
 # ticのポート番号の設定
 PORT_NUMBER = "COM3"
 
@@ -29,27 +31,28 @@ INITIAL_TEMPERATURE = START_TEMPERATURE - 3.0
 STABLE_CHECK_TIMES = 10  # 安定判定のためのデータ取得回数
 MEAN_BOUNDARY = 0.11  # 目標値との差がこの値以下なら安定と判定
 STD_BOUNDARY = 0.125  # 標準偏差がこの値以下なら安定と判定
-SLEEP_TIME = 1.01
+SLEEP_TIME = 1.01   # データ取得間隔（秒）
 ERROR_MAX_FUNC_CHECK_STABLE = 600  # check_stable関数のエラー回数上限
 ERROR_ALART_FOR_FUNC_CHECK_STABLE = 300  # check_stable関数のエラー回数のアラート
 OBJECTIVE_VALUE_DELTA = -1.0  # 目標値とロガーの差分
 
 # カメラの設定
-EXPOSURE_TIME = 150000
-CAPTURE_TIME = 1
-PIXEL_FORMAT = "Mono12"
+EXPOSURE_TIME = 150000  # カメラの露光時間（マイクロ秒）
+CAPTURE_TIME = 1    # カメラのキャプチャ時間（秒）
+PIXEL_FORMAT = "Mono12" # カメラのピクセルフォーマット
 
-CAMERA_SERIAL_1 = "40484804"
-CAMERA_SERIAL_2 = "40524443"
+CAMERA_SERIAL_1 = ""    # カメラのシリアル番号1
+CAMERA_SERIAL_2 = ""    # カメラのシリアル番号2
 
-CAMERA_NAME_1 = "470"
-CAMERA_NAME_2 = "460"
+CAMERA_NAME_1 = ""   # カメラの名前1
+CAMERA_NAME_2 = ""   # カメラの名前2
 
 # 出力フォルダの設定
 OUTPUT_PASS = f"C:/researches/results/test/{CAMERA_NAME_1}-{CAMERA_NAME_2}"
 if not os.path.exists(OUTPUT_PASS):
     os.makedirs(OUTPUT_PASS)
 
+# 設定ここまで
 
 # 温度が安定しているかをチェックする関数
 def check_stable(objective_value, objective_value_delta):
