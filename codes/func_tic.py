@@ -4,7 +4,9 @@ from modbus_tk import modbus_rtu
 import time
 
 # デバイスの設定
-PORT = "COM3"
+PORT = "COM3"   # テスト用のポート番号 実際の運用ではmain.pyから取得します
+
+# 以下の設定は使用する通信仕様に応じて変更してください
 ADDRESS = 2
 BAUDRATE = 9600
 BYTESIZE = 8
@@ -22,7 +24,7 @@ def read_temperature_from_E5CC(port_number):
         control_e5cc = modbus_rtu.RtuMaster(
             serial.Serial(
                 port=port_number,
-                baudrate=BAUDRATE,  # デバイス仕様に応じて設定
+                baudrate=BAUDRATE,
                 bytesize=BYTESIZE,
                 parity=PARITY,
                 stopbits=STOPBITS,
