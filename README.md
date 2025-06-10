@@ -2,7 +2,7 @@
 
 ## はじめに
 
-本プログラムは一部GRAPHTECのSDKを利用しています．[こちら](https://graphtec.co.jp/support/sdk/)からSDKを入手した後に，以下ディレクトリを開いてください．
+本プログラムの一部はグラフテック株式会社が提供するSDKを利用します．[こちら](https://graphtec.co.jp/support/sdk/)からSDKを入手した後に，以下ディレクトリを開いてください．
 
 ```directory
 GL240_840_SDK/Japanese/SampleProgram/GLSample_Python/
